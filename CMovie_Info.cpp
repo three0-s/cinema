@@ -12,4 +12,4 @@ schedule* CMovie_Info::get_movie_schedule() const{
     return this->m_movie_schedule;
 }
 
-~CMovie_Info::CMovie_Info() {delete[] this->m_movie_schedule;}
+CMovie_Info::~CMovie_Info() {delete[] this->m_movie_schedule;}
