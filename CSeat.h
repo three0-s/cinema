@@ -1,7 +1,5 @@
 #ifndef __CSEAT__
 #define __CSEAT__
-                                  
-#include<string>
 
 #include"CPerson_Info.h"
 #include"CMovie_Info.h"
@@ -12,6 +10,7 @@ private:
 
 public:
 	CSeat(std::string name, std::string phonenumber, bool gender, std::string movie_name, int schedule_num);
+	CSeat(const CSeat& seat);
 	void addnum();
 	void init_seatnum();
 };
