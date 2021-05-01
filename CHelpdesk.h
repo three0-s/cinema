@@ -8,9 +8,9 @@ private:
 
 public:
 	CHelpdesk();
-	int menu() {};
-	std::string movie_name() {};
-	int movie_time() {};
+	int menu() ;
+	std::string movie_name();
+	void movie_time(); 
 
 
 

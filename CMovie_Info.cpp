@@ -12,6 +12,10 @@ schedule_table* CMovie_Info::get_movie_schedule() const{
     return this->m_schedule;
 }
 
+const int CMovie_Info::get_m_schedule_num() const{
+    return this->m_schedule_num;
+}
+
 void CMovie_Info::set_movie_schedule(schedule_table* table){
     this->m_schedule = table;
 }

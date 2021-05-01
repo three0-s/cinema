@@ -4,7 +4,7 @@ CHelpdesk::CHelpdesk() {}
 
 int CHelpdesk::menu() {
 	int choice;
-	std::cout << "¿µÈ­ ¿¹¸Å´Â 1¹ø, ¿¹¸Å ÇöÈ² ºÐ¼®Àº 2¹øÀ» ´­·¯ÁÖ¼¼¿ä." << std::endl;
+	std::cout << "ì˜í™” ì˜ˆë§¤ëŠ” 1ë²ˆ, ì˜ˆë§¤ í˜„í™© ë¶„ì„ì€ 2ë²ˆì„ ëˆŒëŸ¬ì£¼ì„¸ìš”. " << std::endl;
 	std::cin >> choice;
 	return choice;
 }
@@ -12,22 +12,20 @@ int CHelpdesk::menu() {
 std::string CHelpdesk::movie_name() {
 	std::string name;
 	std::cout << "-------------------------------------------------" << std::endl;
-	std::cout << "¿µÈ­¸ñ·Ï:" << std::endl;
+	std::cout << "ì˜í™”ëª©ë¡: " << std::endl;
 	std::cout << "----------" << std::endl;
 	
 	
 	
-	std::cout << "¿øÇÏ½Ã´Â ¿µÈ­Á¦¸ñÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä>>" << std::endl;
+	std::cout << "ì›í•˜ì‹œëŠ” ì˜í™”ì œëª©ì„ ìž…ë ¥í•´ ì£¼ì„¸ìš”>>" << std::endl;
 	std::cin >> name;
+	std::cout<<"---------------------------------------------------"<<std::endl;
 	return name;
 }
 
-int CHelpdesk::movie_time() {
-	int time;
-	std::cout << "-------------------------------------------------" << std::endl;
-	
-	
-	
-	std::cout << "¿µÈ­ ½Ã°£ ¹× »ó¿µ°üÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä>>" << std::endl;
+void CHelpdesk::movie_time() {
 
+	std::cout << "-------------------------------------------------" << std::endl;
+	std::cout << "ì˜í™” ì‹œê°„ ë° ìƒì˜ê´€ì„ ì„ íƒí•´ ì£¼ì„¸ìš”>>" << std::endl;
+	
 }
