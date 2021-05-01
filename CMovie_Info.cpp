@@ -4,7 +4,7 @@ CMovie_Info::CMovie_Info(std::string name, int num): m_moviename(name), m_schedu
     m_schedule = new schedule_table[m_schedule_num];
 }
 
-const std::string CMovie_Info::get_movie_name() const{
+std::string CMovie_Info::get_movie_name() const{
     return this->m_moviename;
 }
 

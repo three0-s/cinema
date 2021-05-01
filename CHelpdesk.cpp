@@ -16,7 +16,6 @@ std::string CHelpdesk::movie_name() {
 	std::cout << "----------" << std::endl;
 	
 	
-	
 	std::cout << "원하시는 영화제목을 입력해 주세요>>" << std::endl;
 	std::cin >> name;
 	std::cout<<"---------------------------------------------------"<<std::endl;
@@ -27,5 +26,5 @@ void CHelpdesk::movie_time() {
 
 	std::cout << "-------------------------------------------------" << std::endl;
 	std::cout << "영화 시간 및 상영관을 선택해 주세요>>" << std::endl;
-	
+
 }

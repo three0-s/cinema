@@ -18,7 +18,7 @@ private:
 public:
 	CReserve();
 	bool reserving_info(CPerson_Info &customer);
-	
+	bool cancel_reservation(CPerson_Info &customer);
 	
 
 };

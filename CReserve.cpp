@@ -19,15 +19,14 @@ bool CReserve::reserving_info(CPerson_Info &customer) {
 	}
 	
 	chatbot2.movie_time();
-	std::cin>>movie_zone>>movie_time>>std::endl;
-	
-
-	
+	std::cin>>movie_zone>>movie_time;
 	
 	
 
+}
 
-	
+bool CReserve::cancel_reservation(CPerson_Info &customer){
+
 
 }
 
