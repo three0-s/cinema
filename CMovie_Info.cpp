@@ -8,6 +8,8 @@ const string CMovie_Info::get_movie_name() const{
     return this->m_moviename;
 }
 
+
+
 schedule* CMovie_Info::get_movie_schedule() const{
     return this->m_movie_schedule;
 }

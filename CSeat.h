@@ -12,6 +12,7 @@ private:
 
 public:
 	CSeat(std::string name, std::string phonenumber, bool gender, std::string movie_name, int schedule_num);
+	CSeat();
 	static void addnum() {}
 };
 

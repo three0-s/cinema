@@ -18,6 +18,7 @@ public:
     CMovie_Info(std::string name, int num);
     const std::string get_movie_name() const;
     schedule* get_movie_schedule() const;
+    void set_movie_scheuld();
     ~CMovie_Info();
 };
 
