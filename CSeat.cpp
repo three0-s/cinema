@@ -7,6 +7,11 @@ CSeat::CSeat(const CSeat& seat):CPerson_Info(seat.getname(), seat.getphonenumber
 	m_seatnum = seat.m_seatnum;
 }
 
+CSeat::CSeat():CPerson_Info("", "", false), 
+						CMovie_Info("", 0){
+	CSeat::addnum();
+}
+
 
 int CSeat::get_seat_num() const{
 	return m_seatnum;

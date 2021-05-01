@@ -10,7 +10,7 @@ CZone::CZone(int row_num, int col_num): m_row_num(row_num), m_col_num(col_num){
     }
 }
 
-void CZone::set_seat_info(int row, int col, int time, CSeat seat){
+void CZone::set_seat_info(int row, int col, int time, const CSeat& seat){
     m_seat_info[time][row][col] = seat;
 }
 
