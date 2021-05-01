@@ -2,7 +2,7 @@
 #define __CZONE__
 
 #include "CSeat.h"
-#define SCHEDULE_NUM 6 
+#include "Option.h"
 
 class CZone{
 private:

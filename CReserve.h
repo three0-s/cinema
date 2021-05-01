@@ -5,7 +5,7 @@
 
 #include "CZone.h"
 #include "CHelpdesk.h"
-
+#include "Option.h"
 class CReserve {
 private:
 	CZone* p;
@@ -13,7 +13,7 @@ private:
 	std::string movie_name;
 	int movie_time;
 	
-	CMovie_Info m_movies[SCHEDULE_NUM];
+	CMovie_Info m_movies[MOVIES_NUM];
 public:
 	CReserve();
 	bool reserving_info(CPerson_Info &customer ,std::string movie_name){}
