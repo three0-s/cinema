@@ -1,7 +1,6 @@
 #ifndef __CMOVIEINFO__
 #define __CMOVIEINFO__
 
-#define MAX_NUM_OF_
 #include <string>
 
 enum schedule {MORNIG_1, MORNIG_2, MORNIG_3,
