@@ -28,6 +28,7 @@ public:
     schedule_table* get_movie_schedule() const;
     const int get_m_schedule_num() const;
 
+    void set_movie_name(std::string name);
     void set_movie_schedule(schedule_table* table);
     ~CMovie_Info();
 };

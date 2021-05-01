@@ -12,8 +12,8 @@ private:
 public:
     CZone(int row_num, int col_num);
     ~CZone();
-    void set_seat_info(int row, int col, int time, CSeat seat);
-    CSeat get_seat_info(int row, int col, int time) const;
+    void set_seat_info(int row, int col, int time, const CSeat& seat);  //[time][row][col] 위치의 좌석 정보를 세팅함.
+    CSeat get_seat_info(int row, int col, int time) const;  //[time][row][col] 위치의 좌석 정보를 리턴함.
 };
 
 #endif
