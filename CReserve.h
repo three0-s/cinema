@@ -17,7 +17,7 @@ private:
 public:
 	CReserve();
 	bool reserving_info(CPerson_Info &customer ,std::string movie_name){}
-	void showseat() {}
+	
 	
 
 };

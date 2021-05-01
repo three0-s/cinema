@@ -1,5 +1,7 @@
 #include"CPerson_Info.h"
 
+CPerson_Info::CPerson_Info(){}
+
 CPerson_Info::CPerson_Info(std::string name, std::string phonenumber, bool gender):m_name(name),
 m_phonenumber(phonenumber), m_gender(gender) {};
 

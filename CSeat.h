@@ -8,14 +8,14 @@
 
 class CSeat : public CPerson_Info, public CMovie_Info {
 private:
-	static int seatnum;
+	static int m_seatnum;
 
 public:
 	CSeat(std::string name, std::string phonenumber, bool gender, std::string movie_name, int schedule_num);
 	CSeat();
-	static void addnum() {}
+	static void addnum();
 };
 
-int CSeat::seatnum = 0;
+
 
 #endif

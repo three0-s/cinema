@@ -2,11 +2,11 @@
 #define __CZONE__
 
 #include "CSeat.h"
-#define MOVIES_NUM 9 
+#define SCHEDULE_NUM 6 
 
 class CZone{
 private:
-    CSeat** m_seat_info[MOVIES_NUM];
+    CSeat** m_seat_info[SCHEDULE_NUM];
     const int m_row_num, m_col_num;
 
 public:

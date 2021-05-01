@@ -12,7 +12,8 @@ private:
 
 public:
 	CPerson_Info(std::string name, std::string phonenumber, bool gender);
-	
+	CPerson_Info();
+
 	void setname(std::string m_name);
 	void setphonenumber(std::string m_phonenumber);
 	void setgender(bool gender);
