@@ -23,7 +23,9 @@ private:
 
 public:
     CMovie_Info(std::string name, int num);
+    CMovie_Info(const CMovie_Info& movie_info);
 
+    const CMovie_Info& operator=(const CMovie_Info& movie_info);
     std::string get_movie_name()const ;
     schedule_table* get_movie_schedule() const;
     const int get_m_schedule_num() const;
