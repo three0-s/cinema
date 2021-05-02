@@ -4,6 +4,20 @@ CMovie_Info::CMovie_Info(std::string name, int num): m_moviename(name), m_schedu
     m_schedule = new schedule_table[m_schedule_num];
 }
 
+CMovie_Info::CMovie_Info(const CMovie_Info& movie_info): m_schedule_num(movie_info.get_m_schedule_num()){
+    m_schedule = new schedule_table[m_schedule_num];
+    m_schedule = movie_info.get_movie_schedule();
+    m_moviename = movie_info.get_movie_name();
+}
+
+const CMovie_Info& CMovie_Info::operator=(const CMovie_Info& movie_info){
+    if(this != &movie_info){
+        memcpy(m_schedule, movie_info.get_movie_schedule(), movie_info.get_m_schedule_num());
+        m_moviename = movie_info.get_movie_name();
+    }
+    return *this;
+}
+
 std::string CMovie_Info::get_movie_name() const{
     return this->m_moviename;
 }

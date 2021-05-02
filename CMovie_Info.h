@@ -2,6 +2,7 @@
 #define __CMOVIEINFO__
 
 #include <string>
+#include <cstring>
 
 enum schedule {MORNIG_1, MORNIG_2, MORNIG_3,
                AFTERNOON_1, AFTERNOON_2, AFTERNOON_3,

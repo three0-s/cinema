@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 void msgbox(std::string sentence){
         //(60, 15) center position
@@ -34,12 +35,17 @@ void msgbox(std::string sentence){
             std::cout <<"\n";
         }
 }
-
+void clear(){
+    system("cls");
+}
 
 int main(){
     msgbox("Welcome to LIM Cinema!");
-    int a;
+    int a, b;
     std::cin >> a;
+    
+    system("cls");
+    std::cin >> b;
     return 0;
     
 }
