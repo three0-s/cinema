@@ -2,9 +2,10 @@
 #include "CReserve.h"
 #include "Option.h"
 
-CReserve::CReserve(CMovie_Info *movies)
+CReserve::CReserve(CMovie_Info *movies, CZone* zones)
 {
-	this->m_movies = movies;
+	memcpy(m_movies, movies, movies->get_m_schedule_num());
+	memcpy(zone_Info, zones, ZONE_NUM);
 }
 
 bool CReserve::reserving_info(CPerson_Info &customer)
