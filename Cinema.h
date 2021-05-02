@@ -5,7 +5,7 @@
 #include "CHelpdesk.h"
 #include "CReserve.h"
 #include "CAnalyze.h"
-
+#include "Option.h"
 class Cinema {
 
 private:

@@ -9,6 +9,7 @@ void Cinema::run() {
 	int choice = chatbot1.menu();
 	switch (choice) {
 		case 1:
+			
 			reserve.reserving_info();
 
 		case 2:

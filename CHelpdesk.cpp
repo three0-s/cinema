@@ -26,5 +26,5 @@ void CHelpdesk::movie_time() {
 
 	std::cout << "-------------------------------------------------" << std::endl;
 	std::cout << "영화 시간 및 상영관을 선택해 주세요>>" << std::endl;
-
+	
 }

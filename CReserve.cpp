@@ -84,10 +84,22 @@ bool CReserve::reserving_info(CPerson_Info &customer)
 
 	bool check=isavailable(row_col, (schedule)movie_time, movie_zone);
 
+	this->zone_Info[movie_zone-1].get_seat_info(row, col, movie_time).setname(customer.getname());
+	this->zone_Info[movie_zone-1].get_seat_info(row, col, movie_time).setphonenumber(customer.getphonenumber());
+	this->zone_Info[movie_zone-1].get_seat_info(row, col, movie_time).setgender(customer.getgender());
+
+	int ans;
+	std::cout<<"포인트 적립 하실? 할거면 1 누르셈"<<std::endl;
+	std::cin>>ans;
+	if(ans==1) 
+		customer.addpoint(500);
+	
+
+	
+
 	
 
 }
-
 
 // 특정 좌석이 선택가능한 좌석인지 여부를 반환
 bool CReserve::isavailable(std::string &choose_seat, schedule time, int zone)
@@ -100,7 +112,6 @@ bool CReserve::isavailable(std::string &choose_seat, schedule time, int zone)
 		return false;
 	return true;
 }
-
 bool CReserve::isempty(int row, int col, int time, int zone)
 {
 	if (row < 0 || row > SEAT_ROW_NUM - 1 || col < 0 || col > SEAT_COL_NUM - 1)
@@ -108,6 +119,12 @@ bool CReserve::isempty(int row, int col, int time, int zone)
 	return zone_Info[zone].get_seat_info(row, col, time).isempty;
 }
 
+
+
+
 bool CReserve::cancel_reservation(CPerson_Info &customer)
 {
+	
+
 }
+
