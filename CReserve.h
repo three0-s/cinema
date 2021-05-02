@@ -19,7 +19,7 @@ private:
 	CZone zone_Info[ZONE_NUM];
 	CMovie_Info m_movies[MOVIES_NUM];
 public:
-	CReserve(CMovie_Info* movies, CZone* zones);
+	CReserve(CZone* zones, CMovie_Info* movies);
 	bool reserving_info(CPerson_Info &customer);
 	bool cancel_reservation(CPerson_Info &customer);
 	bool isavailable(std::string &choose_seat, schedule time, int zone);
