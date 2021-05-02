@@ -3,7 +3,7 @@
 
 #include <string>
 
-enum schedule {MORNIG_1, MORNIG_2, MORNIG_3,
+enum schedule {MORNING_1=0, MORNING_2, MORNING_3,
                AFTERNOON_1, AFTERNOON_2, AFTERNOON_3,
                };
 

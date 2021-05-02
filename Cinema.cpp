@@ -1,7 +1,9 @@
 #include "Cinema.h"
 #include "CZone.h"
+#include "Option.h"
 
-Cinema::Cinema() { gwan = new CZone[4] {CZone(5,5), CZone(6,6), CZone(7,7), CZone(8,8)}; };
+Cinema::Cinema() { gwan = new CZone[ZONE_NUM] {CZone(SEAT_ROW_NUM,SEAT_COL_NUM), CZone(SEAT_ROW_NUM,SEAT_COL_NUM),
+											   CZone(SEAT_ROW_NUM,SEAT_COL_NUM),CZone(SEAT_ROW_NUM,SEAT_COL_NUM),};};
 
 void Cinema::run() {
 	int choice = chatbot1.menu();

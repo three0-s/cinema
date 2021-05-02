@@ -4,7 +4,9 @@
 
 #define SCHEDULE_NUM 6 
 #define MOVIES_NUM 4
-
+#define ZONE_NUM 4
+#define SEAT_ROW_NUM 6
+#define SEAT_COL_NUM 6
 
 
 #endif
