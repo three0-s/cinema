@@ -17,7 +17,7 @@ CReserve::CReserve(const CReserve& reserve){
 	movie_name = reserve.get_movie_name();
 	movie_time = reserve.get_movie_time();
 	movie_zone = reserve.get_movie_zone();
-
+	
 	memcpy(zone_Info, reserve.get_zone_info(), ZONE_NUM);
 	memcpy(m_movies, reserve.get_m_movies(), MOVIES_NUM);
 

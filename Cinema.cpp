@@ -2,15 +2,15 @@
 #include "CZone.h"
 #include "Option.h"
 
-Cinema::Cinema() { gwan = new CZone[ZONE_NUM] {CZone(SEAT_ROW_NUM,SEAT_COL_NUM), CZone(SEAT_ROW_NUM,SEAT_COL_NUM),
+Cinema::Cinema() { m_gwan = new CZone[ZONE_NUM] {CZone(SEAT_ROW_NUM,SEAT_COL_NUM), CZone(SEAT_ROW_NUM,SEAT_COL_NUM),
 											   CZone(SEAT_ROW_NUM,SEAT_COL_NUM),CZone(SEAT_ROW_NUM,SEAT_COL_NUM),};};
 
 void Cinema::run() {
-	int choice = chatbot1.menu();
+	int choice = m_chatbot1.menu();
 	switch (choice) {
 		case 1:
 			
-			reserve.reserving_info();
+			m_reserve.reserving_info();
 
 		case 2:
 
