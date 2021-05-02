@@ -24,16 +24,17 @@ class CMovie_Info{
 private:
     std::string m_moviename;
     schedule_table* m_schedule;         //[상영관 번호, 상영시간]의 배열을 만들어서 영화 상영정보를 저장.
-    const int m_schedule_num;           //위의 배열의 갯수를 저장하는 변수. 하루에 몇번 상영하는지.
+    int m_schedule_num;           //위의 배열의 갯수를 저장하는 변수. 즉 하루에 몇번 상영하는지.
 
 public:
     CMovie_Info(std::string name, int num);
     CMovie_Info(const CMovie_Info& movie_info);
+    CMovie_Info();
 
     const CMovie_Info& operator=(const CMovie_Info& movie_info);
     std::string get_movie_name()const ;
     schedule_table* get_movie_schedule() const;
-    const int get_m_schedule_num() const;
+    int get_m_schedule_num() const;
 
     void set_movie_name(std::string name);
     void set_movie_schedule(schedule_table* table);

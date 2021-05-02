@@ -6,9 +6,16 @@ CMovie_Info::CMovie_Info(std::string name, int num): m_moviename(name), m_schedu
 
 CMovie_Info::CMovie_Info(const CMovie_Info& movie_info): m_schedule_num(movie_info.get_m_schedule_num()){
     m_schedule = new schedule_table[m_schedule_num];
-    m_schedule = movie_info.get_movie_schedule();
+    memcpy(m_schedule, movie_info.get_movie_schedule(), movie_info.get_m_schedule_num());
     m_moviename = movie_info.get_movie_name();
 }
+
+CMovie_Info::CMovie_Info(){
+    m_schedule = 0;
+    m_schedule_num = 0;
+    m_moviename = "";
+}
+
 
 const CMovie_Info& CMovie_Info::operator=(const CMovie_Info& movie_info){
     if(this != &movie_info){
@@ -26,7 +33,7 @@ schedule_table* CMovie_Info::get_movie_schedule() const{
     return this->m_schedule;
 }
 
-const int CMovie_Info::get_m_schedule_num() const{
+int CMovie_Info::get_m_schedule_num() const{
     return this->m_schedule_num;
 }
 
