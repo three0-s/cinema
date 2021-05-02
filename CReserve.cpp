@@ -11,6 +11,47 @@ CReserve::CReserve(CZone* zones, CMovie_Info *movies){
 	}
 }
 
+//복사생성자
+CReserve::CReserve(const CReserve& reserve){
+	chatbot2 = reserve.get_chatbot();
+	movie_name = reserve.get_movie_name();
+	movie_time = reserve.get_movie_time();
+	movie_zone = reserve.get_movie_zone();
+
+	memcpy(zone_Info, reserve.get_zone_info(), ZONE_NUM);
+	memcpy(m_movies, reserve.get_m_movies(), MOVIES_NUM);
+
+}
+
+
+
+CHelpdesk CReserve::get_chatbot() const{
+	return chatbot2;
+}
+std::string CReserve::get_movie_name() const{
+	return movie_name;
+}
+int CReserve::get_movie_time() const{
+	return movie_time;
+}
+int CReserve::get_movie_zone() const{
+	return movie_zone;
+}
+CZone* CReserve::get_zone_info() const{
+	return (CZone*)zone_Info;
+}
+CMovie_Info* CReserve::get_m_movies() const{
+	return (CMovie_Info*)m_movies;
+}
+
+
+
+
+
+
+
+
+
 bool CReserve::reserving_info(CPerson_Info &customer)
 {
 	std::string movie_name = chatbot2.movie_name();
