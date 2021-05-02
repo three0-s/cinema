@@ -120,8 +120,6 @@ bool CReserve::isempty(int row, int col, int time, int zone)
 }
 
 
-
-
 bool CReserve::cancel_reservation(CPerson_Info &customer)
 {
 	

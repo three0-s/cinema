@@ -2,7 +2,10 @@
 
 CPrint::CPrint(){}
 
-void CPrint::msgbox(std::string sentence){
+void CPrint::clear() const{
+    system("cls");
+}
+void CPrint::msgbox(std::string sentence) const{
     //(60, 15) center position
     int size = sentence.size();
 
