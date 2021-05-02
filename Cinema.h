@@ -13,8 +13,8 @@ private:
 	CHelpdesk chatbot1;
 	CReserve reserve;
 	CAnalyze analyze;
-
-
+	
+	
 public:
 	Cinema();
 	void run() {};

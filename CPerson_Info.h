@@ -2,7 +2,11 @@
 #define __CPERSONINFO__
 
 #include<string>
-
+/*
+예매하는 사람의 개인정보
+이름, 전화번호, 성별을 입력받아 리턴
+포인트 적립
+*/
 class CPerson_Info {
 private:
 	std::string m_name;

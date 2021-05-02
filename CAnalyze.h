@@ -3,7 +3,7 @@
 
 class CAnalyze {
 private:
-
+    
 
 public:
 
