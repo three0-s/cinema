@@ -9,10 +9,11 @@ private:
 	static int m_seatnum;
 
 public:
+	bool isempty;
 	CSeat(std::string name, std::string phonenumber, bool gender, std::string movie_name, int schedule_num);
 	CSeat();
 	CSeat(const CSeat& seat);
-
+	
 	CSeat& operator= (const CSeat& seat);	//대입연산자 오버로딩
 	
 	int get_seat_num() const;
