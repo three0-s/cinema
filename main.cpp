@@ -1,13 +1,5 @@
 #include <iostream>
 #include <string>
-<<<<<<< HEAD
-#include "Cinema.h"
-
-int main(){
-    
-    
-    Cinema cinema;
-=======
 #include <stdlib.h>
 
 void msgbox(std::string sentence){
@@ -54,7 +46,6 @@ int main(){
     
     system("cls");
     std::cin >> b;
->>>>>>> 06a6463e0e169d4818fdcc63c465035c8c4c2c5e
     return 0;
     
 }

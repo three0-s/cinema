@@ -8,6 +8,8 @@
 #include "CHelpdesk.h"
 #include "Option.h"
 #include "CZone.h"
+#include <cstring>
+
 class CReserve {
 private:
 	CHelpdesk chatbot2;
@@ -17,12 +19,12 @@ private:
 	CZone zone_Info[ZONE_NUM];
 	CMovie_Info m_movies[MOVIES_NUM];
 public:
-	CReserve(CMovie_Info* movies);
+	CReserve(CMovie_Info* movies, CZone* zones);
 	bool reserving_info(CPerson_Info &customer);
 	bool cancel_reservation(CPerson_Info &customer);
 	bool isavailable(std::string &choose_seat, schedule time, int zone);
 	bool isempty(int row, int col, int time, int zone);
-	
+
 };
 
 #endif
