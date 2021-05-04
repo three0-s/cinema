@@ -3,7 +3,7 @@
 #include "Option.h"
 
 CReserve::CReserve(CZone* zones, CMovie_Info *movies){
-	for(int i = 0; i <ZONE_NUM; i++){
+	for(int i = 0; i <ZONE_NUM; i++){ 
 		zone_Info[i] = zones[i];
 	}
 	for(int i = 0; i < MOVIES_NUM; i++){
