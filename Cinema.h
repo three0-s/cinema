@@ -9,12 +9,12 @@
 class Cinema {
 
 private:
-	CZone *gwan;
-	CHelpdesk chatbot1;
-	CReserve reserve;
-	CAnalyze analyze;
-
-
+	CZone * m_gwan;
+	CHelpdesk m_chatbot1;
+	CReserve m_reserve;
+	CAnalyze m_analyze;
+	 
+	
 public:
 	Cinema();
 	void run() {};

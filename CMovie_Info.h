@@ -4,17 +4,21 @@
 #include <string>
 #include <cstring>
 
-enum schedule {MORNING_1=0, MORNING_2, MORNING_3,
+/*
+영화 정보
+영화 제목, 상영관, 상영 시간에 대한 정보
+*/
+
+enum schedule {MORNING_1, MORNING_2, MORNING_3,
                AFTERNOON_1, AFTERNOON_2, AFTERNOON_3,
                };
 
 
-// [상영관 번호, 상영시간]을 하나로 묶어서 관리함.
+//  [상영관 번호, 상영시간]을 하나로 묶어서 관리함.
 struct schedule_table{
     int m_zone_num;
     schedule m_movie_schedule; 
 };
-
 
 class CMovie_Info{
 private:
