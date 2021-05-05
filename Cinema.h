@@ -12,15 +12,14 @@ class Cinema {
 
 private:
 	CZone* m_gwan;
-	CHelpdesk m_chatbot1;
-	//CReserve m_reserve;
-	//CAnalyze m_analyze;
+	CHelpdesk m_chatbot;
+	
 	CMovie_Info* m_movies;		
 	CPerson_Info* m_people;		//미리 예매한 인원들의 정보
 	CPerson_Info m_customer;      // 현재 예매 하고자 하는 고객 정보.
 
 public:
-	Cinema(CZone* zones, CMovie_Info* movies, CPerson_Info* people, CPerson_Info& customer);
+	Cinema(CZone* zones, CMovie_Info* movies, CPerson_Info* people, CPerson_Info& customer, CReserve receptionist);
 	void run();
 };
 #endif
