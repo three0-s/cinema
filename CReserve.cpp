@@ -45,6 +45,7 @@ CMovie_Info* CReserve::get_m_movies() const{
 }
 
 
+
 bool CReserve::reserving_info(CPerson_Info &customer)
 {
 	this -> movie_name = chatbot2.movie_name();
@@ -55,10 +56,10 @@ bool CReserve::reserving_info(CPerson_Info &customer)
 		{
 			for (int j = 0; j < m_movies[i].get_m_schedule_num(); j++)
 			{
-				std::cout << m_movies[i].get_movie_schedule()[j].m_zone_num + 1 << "관";
+				std::cout << m_movies[i].get_movie_schedule()[j].m_zone_num + 1 << "관  ";
 
 				std::string time = "";
-				switch (m_movies[i].get_movie_schedule()[j].m_movie_schedule)
+				switch (m_movies[i].get_movie_schedule()[j].m_movie_schedule)  
 				{
 				case schedule::MORNING_1:
 					time = "8시 - 9시";
@@ -79,14 +80,21 @@ bool CReserve::reserving_info(CPerson_Info &customer)
 					time = "2시 - 3시";
 					break;
 				}
-				std::cout << time << std::endl;
+
+				std::cout << time <<std::endl;
 			}
 		}
 	}
 
+	std::cout<<"상영관  상영시간의 순서로 입력해주세요."<<std::endl;
+	std::cout<<"8시 - 9시는 1, 9시 - 10시는 2, 10시 - 11시는 3, 12시 - 1시는 4, 1시 - 2시는 5, 2시 - 3시는 6을 입력해 주세요"<<std::endl;
+
 	chatbot2.movie_time();
-	std::cin >> movie_zone >> movie_time; 
+	std::cin >> movie_zone >> movie_time;
+	movie_time--;
 										  // movie_time 은 schedule enum자료형을 따른 다고 가정함
+
+
 
 	//좌석 출력 부분
 	for (int i = 0; i < SEAT_ROW_NUM; i++)
@@ -168,11 +176,7 @@ bool CReserve::cancel_reservation(CPerson_Info &customer)
 			for(int k=0; k<SEAT_ROW_NUM; k++){
 				for(int L=0; L<SEAT_COL_NUM; L++){
 					if((this->zone_Info[i].get_seat_info(row, col, j).getname()==person_name)&&(this->zone_Info[i].get_seat_info(row,col,j).getphonenumber()==phonenumber)){
-						this->zone_Info[i].get_seat_info(row, col, j).subname(person_name);
-						this->zone_Info[i].get_seat_info(row, col, j).subphonenumber(phonenumber);
-						//성별은 어케빼누...string으로 바궈야게따
-						this->zone_Info[i].get_seat_info(row, col, j).subpoint(500);
-						
+						this->zone_Info[i].get_seat_info(row, col, j).isempty==false;
 						}
 					col++;
 				}

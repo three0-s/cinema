@@ -9,7 +9,7 @@ void CPrint::clear() const{
 void CPrint::msgbox(std::string sentence) const{
         //(60, 15) center position
         int size = sentence.size();
-
+        
         for(int i = 0; i < 10; i++)
             std::cout << "\n";
 
@@ -38,4 +38,8 @@ void CPrint::msgbox(std::string sentence) const{
             }
             std::cout <<"\n";
         }
+}
+
+void CPrint::pyo(std::string col1, std::string col2, std::string* col1_ptr, std::string* col2_ptr, int col1_size, int col2_size) const{
+    
 }
