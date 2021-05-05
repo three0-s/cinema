@@ -13,7 +13,7 @@ private:
 	CHelpdesk m_chatbot1;
 	CReserve m_reserve;
 	CAnalyze m_analyze;
-	 
+	
 	
 public:
 	Cinema();

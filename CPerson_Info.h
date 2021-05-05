@@ -22,7 +22,12 @@ public:
 	void setphonenumber(std::string m_phonenumber);
 	void setgender(bool gender);
 	void setpoint(int point);
-	void addpoint(int point);
+	void addpoint(int point);	
+	
+	void subname(std::string name);
+	void subphonenumber(std::string phonenumber);
+	void subgender(bool gender);
+	void subpoint(int point);
 
 	int getpoint() const;
 	std::string getname() const;

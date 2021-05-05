@@ -17,7 +17,7 @@ CReserve::CReserve(const CReserve& reserve){
 	movie_name = reserve.get_movie_name();
 	movie_time = reserve.get_movie_time();
 	movie_zone = reserve.get_movie_zone();
-	
+
 	memcpy(zone_Info, reserve.get_zone_info(), ZONE_NUM);
 	memcpy(m_movies, reserve.get_m_movies(), MOVIES_NUM);
 
@@ -43,13 +43,6 @@ CZone* CReserve::get_zone_info() const{
 CMovie_Info* CReserve::get_m_movies() const{
 	return (CMovie_Info*)m_movies;
 }
-
-
-
-
-
-
-
 
 
 bool CReserve::reserving_info(CPerson_Info &customer)
@@ -93,8 +86,8 @@ bool CReserve::reserving_info(CPerson_Info &customer)
 	}
 
 	chatbot2.movie_time();
-	std::cin >> movie_zone >> movie_time; //movie_zone은 실제 상영관의 번호. 따라서 인덱스로 사용시엔 -1 해야함.
-										  // movie_time 은 schedule enum자료형을 따른 다고 가정.
+	std::cin >> movie_zone >> movie_time; 
+										  // movie_time 은 schedule enum자료형을 따른 다고 가정함
 
 	//좌석 출력 부분
 	for (int i = 0; i < SEAT_ROW_NUM; i++)
@@ -139,11 +132,7 @@ bool CReserve::reserving_info(CPerson_Info &customer)
 	if(ans==1) 
 		customer.addpoint(500);
 	
-
 	
-
-	
-
 }
 
 // 특정 좌석이 선택가능한 좌석인지 여부를 반환
@@ -160,14 +149,36 @@ bool CReserve::isavailable(std::string &choose_seat, schedule time, int zone)
 bool CReserve::isempty(int row, int col, int time, int zone)
 {
 	if (row < 0 || row > SEAT_ROW_NUM - 1 || col < 0 || col > SEAT_COL_NUM - 1)
-		return true; //좌석이 범위를 벗어날 경우 고려하지 않아도 된다.
+		return true; //좌석이 범위를 벗어날 경우 고려하지 않아도 됨!
 	return zone_Info[zone].get_seat_info(row, col, time).isempty;
 }
 
 
 bool CReserve::cancel_reservation(CPerson_Info &customer)
 {
-	
+	std::string person_name;
+	std::string phonenumber;
+	std::cout<<"이름을 입력해 주세요"<<std::endl;
+	std::cin>>person_name;
+	std::cout<<"전화번호를 입력해 주세요"<<std::endl;
+	std::cin>>phonenumber;
 
+	int row=0, col=0;
+	for(int i=0; i<ZONE_NUM; i++){
+		for(int j=0; j<SCHEDULE_NUM; j++){
+			for(int k=0; k<SEAT_ROW_NUM; k++){
+				for(int L=0; L<SEAT_COL_NUM; L++){
+					if((this->zone_Info[i].get_seat_info(row, col, j).getname()==person_name)&&(this->zone_Info[i].get_seat_info(row,col,j).getphonenumber()==phonenumber)){
+						this->zone_Info[i].get_seat_info(row, col, j).subname(person_name);
+						this->zone_Info[i].get_seat_info(row, col, j).subphonenumber(phonenumber);
+						//성별은 어케빼누...string으로 바궈야게따
+						this->zone_Info[i].get_seat_info(row, col, j).subpoint(500);
+						
+						}
+					col++;
+				}
+				row++;
+			}
+		}
+	}
 }
-
