@@ -1,6 +1,6 @@
 #include "CSeat.h"
 
-int CSeat::m_seatnum = 0;
+int CSeat::m_total_seats = 0;
 
 CSeat::CSeat(const CSeat& seat):CPerson_Info(seat.getname(), seat.getphonenumber(), seat.getgender()), 
 						CMovie_Info(seat.get_movie_name(), seat.get_m_schedule_num()){
@@ -11,6 +11,7 @@ CSeat::CSeat(const CSeat& seat):CPerson_Info(seat.getname(), seat.getphonenumber
 CSeat::CSeat():CPerson_Info("", "", false), 
 						CMovie_Info("", 0){
 	CSeat::addnum();
+	m_seatnum = m_total_seats;
 	isempty = true;
 }
 
@@ -35,12 +36,15 @@ CSeat& CSeat::operator= (const CSeat& seat){
 
 
 void CSeat::init_seatnum() {
-	m_seatnum = 0;
+	m_total_seats = 0;
 }
 CSeat::CSeat(std::string name, std::string phonenumber, bool gender, std::string movie_name, int schedule_num) :
 	CPerson_Info(name, phonenumber, gender), CMovie_Info(movie_name, schedule_num) {
 	CSeat::addnum();
+	m_seatnum = m_total_seats;
 	isempty=false;
+	if(name.size() == 0)
+		isempty=true;
 };
 
-void CSeat::addnum() { this->m_seatnum++; }
+void CSeat::addnum() { this->m_total_seats++; }

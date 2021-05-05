@@ -6,7 +6,8 @@
 
 class CSeat : public CPerson_Info, public CMovie_Info{
 private:
-	static int m_seatnum;
+	int m_seatnum;
+	static int m_total_seats;
 
 public:
 	bool isempty;
@@ -18,7 +19,7 @@ public:
 	
 	int get_seat_num() const;
 	void addnum();
-	void init_seatnum();
+	static void init_seatnum();
 };
 
 #endif

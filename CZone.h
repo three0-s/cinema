@@ -10,10 +10,12 @@ private:
     CSeat** m_seat_info[SCHEDULE_NUM];      //한 상영관에서 상영되는 좌석의 정보를 저장함.
     int m_row_num, m_col_num;
 
+    void allocate(int row, int col);
+    void free();
+    
 public:
-    CZone(int row_num, int col_num);
+    CZone(int row_num=SEAT_ROW_NUM, int col_num=SEAT_COL_NUM);
     CZone(const CZone& zone);
-    CZone();
     ~CZone();
 
     const CZone& operator= (const CZone& zone);
