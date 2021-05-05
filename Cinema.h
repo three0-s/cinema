@@ -16,10 +16,11 @@ private:
 	
 	CMovie_Info* m_movies;		
 	CPerson_Info* m_people;		//미리 예매한 인원들의 정보
-	CPerson_Info m_customer;      // 현재 예매 하고자 하는 고객 정보.
-
+	CPerson_Info m_customer;    // 현재 예매 하고자 하는 고객 정보.
+	
 public:
-	Cinema(CZone* zones, CMovie_Info* movies, CPerson_Info* people, CPerson_Info& customer, CReserve receptionist);
+	Cinema(CZone* zones, CMovie_Info* movies, CPerson_Info* people, CPerson_Info& customer, CReserve receptionist,
+			std::string* movie_titles);
 	void run();
 };
 #endif

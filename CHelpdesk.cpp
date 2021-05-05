@@ -1,7 +1,13 @@
 #include "CHelpdesk.h"
 #include <windows.h>
 
-CHelpdesk::CHelpdesk(CReserve& receptionsist): m_receptionist(receptionsist) {;}
+CHelpdesk::CHelpdesk(CReserve& receptionsist, std::string* movie_schedule): m_receptionist(receptionsist),
+													m_movie_schedule(movie_schedule) {
+	m_movie_num = new std::string[MOVIES_NUM];
+	for(int i = 0; i < MOVIES_NUM; i++)
+		m_movie_num[i] = std::to_string(i+1);
+
+}
 
 bool CHelpdesk::menu() {
 	m_printer.msgbox("Welcome to LIM CINEMA!");

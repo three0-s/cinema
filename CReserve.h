@@ -11,15 +11,15 @@
 
 class CReserve {
 private:
-	std::string movie_name;
-	int movie_time;
-	int movie_zone;
+	std::string m_movie_name;
+	int m_movie_time;
+	int m_movie_zone;
 	
-	CZone* zone_Info;
+	CZone* m_zone_info;
 	CMovie_Info* m_movies;
 	
 public:
-	CReserve(CZone* zones, CMovie_Info* movies);
+	CReserve(CZone* zones, CMovie_Info* movies, std::string movie_name);
 
 	CReserve(const CReserve& reserve); //복사 생성자
 	
@@ -29,7 +29,7 @@ public:
 	CZone* get_zone_info() const;
 	CMovie_Info* get_m_movies() const;
 
-	bool reserving_info(CPerson_Info &customer);
+	bool reserve(CPerson_Info &customer);
 	bool cancel_reservation(CPerson_Info &customer);
 	bool isavailable(std::string &choose_seat, schedule time, int zone);
 	bool isempty(int row, int col, int time, int zone);
