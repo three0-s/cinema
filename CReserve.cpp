@@ -2,18 +2,10 @@
 #include "CReserve.h"
 #include "Option.h"
 
-CReserve::CReserve(CZone* zones, CMovie_Info *movies){
-	for(int i = 0; i <ZONE_NUM; i++){ 
-		zone_Info[i] = zones[i];
-	}
-	for(int i = 0; i < MOVIES_NUM; i++){
-		m_movies[i] = movies[i];
-	}
-}
+CReserve::CReserve(CZone* zones, CMovie_Info *movies):zone_Info(zones), m_movies(movies){}
 
 //복사생성자
 CReserve::CReserve(const CReserve& reserve){
-	chatbot2 = reserve.get_chatbot();
 	movie_name = reserve.get_movie_name();
 	movie_time = reserve.get_movie_time();
 	movie_zone = reserve.get_movie_zone();
@@ -23,11 +15,6 @@ CReserve::CReserve(const CReserve& reserve){
 
 }
 
-
-
-CHelpdesk CReserve::get_chatbot() const{
-	return chatbot2;
-}
 std::string CReserve::get_movie_name() const{
 	return movie_name;
 }
@@ -48,7 +35,7 @@ CMovie_Info* CReserve::get_m_movies() const{
 
 bool CReserve::reserving_info(CPerson_Info &customer)
 {
-	this -> movie_name = chatbot2.movie_name();
+	//this -> movie_name = chatbot2.movie_name();
 	
 	for (int i = 0; i < MOVIES_NUM; i++)
 	{
@@ -89,7 +76,7 @@ bool CReserve::reserving_info(CPerson_Info &customer)
 	std::cout<<"상영관  상영시간의 순서로 입력해주세요."<<std::endl;
 	std::cout<<"8시 - 9시는 1, 9시 - 10시는 2, 10시 - 11시는 3, 12시 - 1시는 4, 1시 - 2시는 5, 2시 - 3시는 6을 입력해 주세요"<<std::endl;
 
-	chatbot2.movie_time();
+	//chatbot2.movie_time();
 	std::cin >> movie_zone >> movie_time;
 	movie_time--;
 										  // movie_time 은 schedule enum자료형을 따른 다고 가정함

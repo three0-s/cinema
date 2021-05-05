@@ -4,10 +4,9 @@ int main(){
     CPrint pbuffer;
     int a, b;
 
-    pbuffer.msgbox("Welcome to LIM Cinema! Professor Fuck off!:) ");
     while(true){
-        //std::cout <<"hello";
-    
+        pbuffer.msgbox("Welcome to LIM Cinema! Professor Fuck off!:) ");
+        
         std::cin >> a;
         pbuffer.clear();
         std::cin >> b;

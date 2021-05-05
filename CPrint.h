@@ -7,7 +7,6 @@
 
 class CPrint{
 private:
-    
 
 public:
     CPrint();
