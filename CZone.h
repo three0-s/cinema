@@ -22,8 +22,8 @@ public:
 
     int get_seat_num(bool want_row_num) const;
     void set_seat_num(bool want_row_num, int num);
-    void set_seat_info(int row, int col, int time, const CSeat& seat);  //[time][row][col] 위치의 좌석 정보를 세팅함.
-    void set_movie_info(int time, int zone, std::string title);
+    void set_seat_info(int row, int col, int time, CPerson_Info customer);  //[time][row][col] 위치의 좌석 정보를 세팅함.
+    void set_movie_info(int time, std::string title);
     CSeat get_seat_info(int row, int col, int time) const;  //[time][row][col] 위치의 좌석 정보를 리턴함.
 
 };

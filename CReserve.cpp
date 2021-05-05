@@ -126,7 +126,8 @@ bool CReserve::reserve(CPerson_Info &customer)
 	this->m_zone_info[m_movie_zone-1].get_seat_info(row, col, m_movie_time).setname(customer.getname());
 	this->m_zone_info[m_movie_zone-1].get_seat_info(row, col, m_movie_time).setphonenumber(customer.getphonenumber());
 	this->m_zone_info[m_movie_zone-1].get_seat_info(row, col, m_movie_time).setgender(customer.getgender());
-
+	this->m_zone_info[m_movie_zone-1].get_seat_info(row, col, m_movie_time).isempty = false;
+	
 	int ans;
 	std::cout<<"포인트 적립 하실? 할거면 1 누르셈"<<std::endl;
 	std::cin>>ans;

@@ -82,10 +82,18 @@ CZone::CZone(const CZone& zone): m_row_num(zone.get_seat_num(true)), m_col_num(z
 
 }
 
-void CZone::set_seat_info(int row, int col, int time, const CSeat& seat){
-    m_seat_info[time][row][col] = seat;
+void CZone::set_seat_info(int row, int col, int time, CPerson_Info customer){
+    m_seat_info[time][row][col].setgender(customer.getgender());
+    m_seat_info[time][row][col].setname(customer.getname());
+    m_seat_info[time][row][col].setphonenumber(customer.getphonenumber());
 }
-
+void CZone::set_movie_info(int time, std::string title){
+    for(int i = 0; i < m_row_num; i++){
+        for(int j = 0; j < m_col_num; j++){
+            m_seat_info[time][i][j].set_movie_name(title);
+        }
+    }
+}
 
 CZone::~CZone(){  free(); }
 CSeat CZone::get_seat_info(int row, int col, int time) const{
