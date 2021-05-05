@@ -18,11 +18,11 @@ private:
 	int movie_zone;
 	CZone zone_Info[ZONE_NUM];
 	CMovie_Info m_movies[MOVIES_NUM];
-
+	
 public:
 	CReserve(CZone* zones, CMovie_Info* movies);
-	//복사 생성자
-	CReserve(const CReserve& reserve);
+
+	CReserve(const CReserve& reserve); //복사 생성자
 	
 	CHelpdesk get_chatbot() const;
 	std::string get_movie_name() const;

@@ -23,8 +23,8 @@ struct schedule_table{
 class CMovie_Info{
 private:
     std::string m_moviename;
-    schedule_table* m_schedule;         //[상영관 번호, 상영시간]의 배열을 만들어서 영화 상영정보를 저장.
-    int m_schedule_num;           //위의 배열의 갯수를 저장하는 변수. 즉 하루에 몇번 상영하는지.
+    schedule_table* m_schedule;         //[상영관 번호, 상영시간]의 배열을 만들어서 영화 상영정보를 저장
+    int m_schedule_num;           //위의 배열의 갯수를 저장하는 변수 즉 하루에 몇번 상영하는지
 
 public:
     CMovie_Info(std::string name, int num);
