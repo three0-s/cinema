@@ -21,6 +21,5 @@ private:
 public:
 	Cinema(CZone* zones, CMovie_Info* movies, CPerson_Info* people, CPerson_Info& customer, CReserve receptionist,
 			std::string* movie_titles);
-	void run();
 };
 #endif

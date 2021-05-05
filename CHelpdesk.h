@@ -18,8 +18,6 @@ private:
 public:
 	CHelpdesk(CReserve& receptionist, std::string* movie_titles, CPerson_Info& customer);
 	bool menu();
-	std::string movie_name();
-	void movie_time(); 
 
 };
 
