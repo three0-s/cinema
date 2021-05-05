@@ -45,7 +45,7 @@ void CPrint::msgbox(std::string sentence) const{
 
 void CPrint::pyo(std::string col1, std::string col2, std::string* col1_ptr, std::string* col2_ptr, int col1_size, int col2_size, int array_size) const{
 
-    for(int i = 0; i < 8; i++)
+    for(int i = 0; i < 30; i++)
             std::cout << "\n";
 
     pyo_zul(col1_size, col2_size);
@@ -62,10 +62,11 @@ void CPrint::pyo(std::string col1, std::string col2, std::string* col1_ptr, std:
 
     for(int k=0; k<array_size; k++){
         pyo_zul(col1_size, col2_size);
+        std::cout<<"\n";
         pyo_naeyong(col1_ptr, col2_ptr, col1_size, col2_size, k);
     }
 
-    for(int i = 0; i < 8; i++)
+    for(int i = 0; i < 4; i++)
             std::cout << "\n";
 }
 
@@ -77,7 +78,7 @@ void CPrint::pyo_zul(int col1_size, int col2_size) const{
         for(int j = 0; j < (int)((col1_size+col2_size)*1.8); j++){
             std::cout << "-";
         }
-        std::cout <<"\n\n";
+        std::cout <<"\n";
     }
 }
 

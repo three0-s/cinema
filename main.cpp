@@ -10,14 +10,16 @@ int main(){
     std::string arrayA[5] = {"1 zone", "2 zone", "3 zone", "4 zone", "5 zone"};
     std::string arrayB[5] = {"1 time", "2 time", "3 time", "4 time", "5 time"};
 
-    while(true){
-        pbuffer.msgbox("Welcome to LIM Cinema! Professor Fuck off!:) ");
-        
-        Sleep(3000);
-        pbuffer.clear();
+    
+    pbuffer.msgbox("Welcome to LIM Cinema! Professor Fuck off!:) ");
+    Sleep(3000);
+    pbuffer.clear();
 
-        pbuffer.pyo(A, B, arrayA, arrayB, A.size(), B.size(), 5);
-    }
-     
+    pbuffer.pyo(A, B, arrayA, arrayB, A.size(), B.size(), 5);
+
+    Sleep(30000);
+
+
+
     return 0;
 }
