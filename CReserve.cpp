@@ -47,9 +47,8 @@ CMovie_Info* CReserve::get_m_movies() const{
 
 bool CReserve::reserving_info(CPerson_Info &customer)
 {
-	std::string movie_name = chatbot2.movie_name();
-	this->movie_name = movie_name;
-
+	this -> movie_name = chatbot2.movie_name();
+	
 	for (int i = 0; i < MOVIES_NUM; i++)
 	{
 		if (m_movies[i].get_movie_name() == movie_name)

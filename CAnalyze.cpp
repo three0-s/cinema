@@ -62,26 +62,7 @@ void CAnalyze::start_analyzing(){
 
 }
 
-int CAnalyze::get_movie_time() const{
-    return movie_time;
-};
-int CAnalyze::get_movie_zone() const{
-    return movie_zone;
-};
-CHelpdesk CAnalyze::get_chatbot() const{
-    return chatbot3;
-}
-std::string CAnalyze::get_movie_name() const{
-    return movie_name; 
-}
-CZone* CAnalyze::get_zone_info() const{
-    return (CZone*)zone_Info2;
-}
-CMovie_Info* CAnalyze::get_m_movies() const{
-    return (CMovie_Info*)m_movies2;
-}
-
-int CAnalyze::most_reserved_seat(){
+int  (* CAnalyze::most_reserved_seat())[SEAT_ROW_NUM]{
     int result[SEAT_COL_NUM][SEAT_ROW_NUM];
 
     int row=0,col=0;
@@ -98,7 +79,7 @@ int CAnalyze::most_reserved_seat(){
         }
     }
 
-    return **result;
+    return result;
 }
 
 void CAnalyze::most_reserved_seat_movie(){

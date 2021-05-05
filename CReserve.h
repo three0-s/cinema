@@ -16,6 +16,7 @@ private:
 	std::string movie_name;
 	int movie_time;
 	int movie_zone;
+	
 	CZone zone_Info[ZONE_NUM];
 	CMovie_Info m_movies[MOVIES_NUM];
 	

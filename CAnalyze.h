@@ -10,19 +10,15 @@ private:
     CHelpdesk chatbot3;
     CZone zone_Info2[ZONE_NUM];
     CMovie_Info m_movies2[MOVIES_NUM];
-    int movie_zone;
-    int movie_time;
-    std::string movie_name;
+    
 public:
     CAnalyze(CZone* zones, CMovie_Info *movies);
     CAnalyze(const CAnalyze& analyze);
     CHelpdesk get_chatbot() const;
-    std::string get_movie_name() const;
-    CZone* get_zone_info() const;
-    CMovie_Info* get_m_movies() const;
+   
     
     void start_analyzing();
-    int most_reserved_seat();
+    int  (* most_reserved_seat())[SEAT_ROW_NUM];
     void most_reserved_seat_movie();
     void most_reserved_seat_gender();
     int get_movie_time() const;
