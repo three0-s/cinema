@@ -7,6 +7,6 @@
 #define ZONE_NUM 4
 #define SEAT_ROW_NUM 6
 #define SEAT_COL_NUM 6
-
+#define PEOPLE_NUM 100
 
 #endif
