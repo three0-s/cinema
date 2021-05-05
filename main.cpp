@@ -10,7 +10,8 @@
 
 int main(){
     
-    CZone zones[ZONE_NUM];
+    CZone zones[ZONE_NUM]={CZone(SEAT_ROW_NUM, SEAT_COL_NUM), CZone(SEAT_ROW_NUM, SEAT_COL_NUM),
+                           CZone(SEAT_ROW_NUM, SEAT_COL_NUM), CZone(SEAT_ROW_NUM, SEAT_COL_NUM),};
 
 
     CMovie_Info movies[MOVIES_NUM]={CMovie_Info("어벤져스", 6), CMovie_Info("소울", 6), CMovie_Info("광해", 6), CMovie_Info("어바웃 타임",6)};
