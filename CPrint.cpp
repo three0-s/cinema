@@ -1,10 +1,13 @@
 #include "CPrint.h"
 
+
+
 CPrint::CPrint(){}
 
 void CPrint::clear() const{
-   for(int i = 0; i < 60; i++)
-        std::cout << "\n";
+    //for(int i = 0; i < 60; i++)
+    //    std::cout << "\n";
+    system("cls");
 }
 void CPrint::msgbox(std::string sentence) const{
         //(60, 15) center position
