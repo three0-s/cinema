@@ -15,10 +15,16 @@ enum schedule {MORNING_1, MORNING_2, MORNING_3,
 
 
 //  [상영관 번호, 상영시간]을 하나로 묶어서 관리함.
-struct schedule_table{
+class schedule_table{
+public:
     int m_zone_num;
     schedule m_movie_schedule; 
+
+    schedule_table(int zone_num, schedule movie_schedule);
+    schedule_table();
 };
+
+
 
 class CMovie_Info{
 private:
@@ -35,7 +41,7 @@ public:
     std::string get_movie_name()const ;
     schedule_table* get_movie_schedule() const;
     int get_m_schedule_num() const;
-    
+
     void set_movie_name(std::string name);
     void set_movie_schedule(schedule_table* table);
     ~CMovie_Info();

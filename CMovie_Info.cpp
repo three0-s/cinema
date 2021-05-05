@@ -1,5 +1,11 @@
 #include "CMovie_Info.h"
 
+schedule_table::schedule_table() {}
+
+schedule_table::schedule_table(int zone_num, schedule movie_schedule){
+    m_zone_num = zone_num;
+    m_movie_schedule = movie_schedule;
+}
 CMovie_Info::CMovie_Info(std::string name, int num): m_moviename(name), m_schedule_num(num){
     m_schedule = new schedule_table[m_schedule_num];
 }
