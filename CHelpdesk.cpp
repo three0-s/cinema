@@ -1,12 +1,40 @@
 #include "CHelpdesk.h"
-#include<iostream>
-CHelpdesk::CHelpdesk() {}
+#include <windows.h>
 
-int CHelpdesk::menu() {
+CHelpdesk::CHelpdesk(CReserve& receptionsist): m_receptionist(receptionsist) {;}
+
+bool CHelpdesk::menu() {
+	m_printer.msgbox("Welcome to LIM CINEMA!");
+	
+	for(int i = 0; i < 50; i++)
+		std::cout << " ";
+
+	for(int i = 0; i < 500; i++){
+		std::cout << "=";
+		Sleep(10);
+	}
+	m_printer.clear();
+
 	int choice;
-	std::cout << "영화 예매는 1번, 예매 현황 분석은 2번을 눌러주세요. " << std::endl;
+	std::cout << "영화 예매는 1번, 예매 현황 분석은 2번, 종료는 3번을 눌러주세요. \n";
 	std::cin >> choice;
-	return choice;
+	
+	switch (choice)
+	{
+	case 1:
+		/* code */
+		break;
+	case 2:
+		/* code */
+		break;
+	case 3:
+		/* code */
+		break;
+	
+	default:
+		break;
+	}
+
 }
 
 std::string CHelpdesk::movie_name() {
