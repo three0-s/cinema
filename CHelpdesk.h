@@ -9,13 +9,14 @@ class CHelpdesk {
 private:
 	CReserve m_receptionist;
 	CPrint m_printer;
+	CPerson_Info m_customer;
 
-	std::string* m_movie_schedule;
+	std::string* m_movie_titles;
 	std::string* m_movie_num;
 	std::string m_col1_idx, m_col2_idx;
 
 public:
-	CHelpdesk(CReserve& receptionist, std::string* movie_schedule);
+	CHelpdesk(CReserve& receptionist, std::string* movie_titles, CPerson_Info& customer);
 	bool menu();
 	std::string movie_name();
 	void movie_time(); 

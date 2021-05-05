@@ -1,8 +1,11 @@
 #include "CHelpdesk.h"
 #include <windows.h>
 
-CHelpdesk::CHelpdesk(CReserve& receptionsist, std::string* movie_schedule): m_receptionist(receptionsist),
-													m_movie_schedule(movie_schedule) {
+CHelpdesk::CHelpdesk(CReserve& receptionsist, std::string* movie_titles, CPerson_Info& customer): m_receptionist(receptionsist),
+													m_movie_titles(movie_titles), m_customer(customer) {
+	m_col1_idx = "| No |";
+	m_col2_idx = "| Titles |";
+	
 	m_movie_num = new std::string[MOVIES_NUM];
 	for(int i = 0; i < MOVIES_NUM; i++)
 		m_movie_num[i] = std::to_string(i+1);
@@ -25,19 +28,29 @@ bool CHelpdesk::menu() {
 	std::cout << "영화 예매는 1번, 예매 현황 분석은 2번, 종료는 3번을 눌러주세요. \n";
 	std::cin >> choice;
 	
+	int title_no;
+
 	switch (choice)
 	{
 	case 1:
-		/* code */
+		
+		m_printer.pyo(m_col1_idx, m_col2_idx, m_movie_num, m_movie_titles, m_col1_idx.size(), m_col2_idx.size(), MOVIES_NUM);
+		std::cout << "보고 싶으신 영화의 번호를 입력해 주세요\n";
+		std::cin >> title_no;
+
+		m_receptionist.set_movie_name(m_movie_titles[title_no - 1]);
+		m_receptionist.reserve(m_customer);
+		return true;
 		break;
 	case 2:
 		/* code */
 		break;
 	case 3:
-		/* code */
+		return false;
 		break;
 	
 	default:
+		return true;
 		break;
 	}
 

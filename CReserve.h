@@ -19,7 +19,7 @@ private:
 	CMovie_Info* m_movies;
 	
 public:
-	CReserve(CZone* zones, CMovie_Info* movies, std::string movie_name);
+	CReserve(CZone* zones, CMovie_Info* movies);
 
 	CReserve(const CReserve& reserve); //복사 생성자
 	
@@ -29,6 +29,8 @@ public:
 	CZone* get_zone_info() const;
 	CMovie_Info* get_m_movies() const;
 
+	void set_movie_name(std::string title);
+	
 	bool reserve(CPerson_Info &customer);
 	bool cancel_reservation(CPerson_Info &customer);
 	bool isavailable(std::string &choose_seat, schedule time, int zone);

@@ -2,8 +2,11 @@
 #include "CReserve.h"
 #include "Option.h"
 
-CReserve::CReserve(CZone* zones, CMovie_Info *movies, std::string movie_name):m_zone_info(zones), m_movies(movies), 
-													m_movie_name(movie_name){}
+CReserve::CReserve(CZone* zones, CMovie_Info *movies):m_zone_info(zones), m_movies(movies){}
+
+void CReserve::set_movie_name(std::string title){
+	m_movie_name = title;
+}
 
 //복사생성자
 CReserve::CReserve(const CReserve& reserve){
