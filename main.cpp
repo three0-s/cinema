@@ -30,7 +30,7 @@ int main(){
     for(int i = 0; i < MOVIES_NUM; i++){
         for(int j = 0; j < SCHEDULE_NUM; j++){
             int zone = daily_movie[i][j].m_zone_num;
-            zones[zone].set_movie_info(daily_movie[i][j].m_movie_schedule, zone, movie_title[i]);
+            zones[zone].set_movie_info(daily_movie[i][j].m_movie_schedule, movie_title[i]);
         }
     }
 
@@ -91,7 +91,13 @@ int main(){
 
     for(int i = 0; i < ZONE_NUM; i++){
         for(int j = 0; j < 25; j++){
-            
+            for(int k=0; k<5; k++){
+                for(int L=0; L<5; L++){
+                    for(int M=0; M<5; M++){
+                        zones[i].set_seat_info(k,L,M, people[25*i+j]);       
+                    }
+                }
+            }
         }
     }
     Cinema cinema();
