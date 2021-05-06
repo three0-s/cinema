@@ -1,5 +1,7 @@
 {
     "files.associations": {
         "xstring": "cpp"
-    }
+    },
+    "terminal.integrated.shellArgs.windows": ["/K", "chcp 65001"],
+    
 }
