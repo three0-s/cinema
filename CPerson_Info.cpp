@@ -2,7 +2,7 @@
 
 CPerson_Info::CPerson_Info(){}
 
-CPerson_Info::CPerson_Info(std::string name, std::string phonenumber, bool gender, int point=500):m_name(name),
+CPerson_Info::CPerson_Info(std::string name, std::string phonenumber, bool gender, int point):m_name(name),
 m_phonenumber(phonenumber), m_gender(gender), m_point(point) {};
 
 void CPerson_Info::setname(std::string m_name) { this->m_name = m_name; }

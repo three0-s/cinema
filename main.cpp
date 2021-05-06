@@ -100,8 +100,13 @@ int main(){
             }
         }
     }
-    Cinema cinema();
+    CPerson_Info customer("임예원", "01054462109", true, 50000);
+    CReserve receptionist(zones, movies);
 
+    Cinema cinema(zones, movies, people, customer, receptionist, movie_title);
+    while(1){
+        cinema.m_chatbot.menu();
+    }
 
 
     return 0;

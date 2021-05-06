@@ -1,0 +1,1 @@
+g++ -o main main.cpp CPerson_Info.cpp CMovie_Info.cpp CSeat.cpp CZone.cpp CPrint.cpp CHelpdesk.cpp CReserve.cpp Cinema.cpp  

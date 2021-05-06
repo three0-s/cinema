@@ -1,6 +1,6 @@
 #include "CZone.h"
 
-CZone::CZone(int row_num=SEAT_ROW_NUM, int col_num=SEAT_COL_NUM): m_row_num(row_num), m_col_num(col_num){
+CZone::CZone(int row_num, int col_num): m_row_num(row_num), m_col_num(col_num){
     CSeat::init_seatnum();
     this -> allocate(m_row_num, m_col_num);
 }
@@ -86,6 +86,8 @@ void CZone::set_seat_info(int row, int col, int time, CPerson_Info customer){
     m_seat_info[time][row][col].setgender(customer.getgender());
     m_seat_info[time][row][col].setname(customer.getname());
     m_seat_info[time][row][col].setphonenumber(customer.getphonenumber());
+    m_seat_info[time][row][col].isempty = false;
+    
 }
 void CZone::set_movie_info(int time, std::string title){
     for(int i = 0; i < m_row_num; i++){

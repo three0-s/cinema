@@ -43,7 +43,7 @@ bool CHelpdesk::menu() {
 		return true;
 		break;
 	case 2:
-		/* code */
+		return true;
 		break;
 	case 3:
 		return false;
