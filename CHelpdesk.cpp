@@ -11,6 +11,9 @@ CHelpdesk::CHelpdesk(CReserve& receptionsist, std::string* movie_titles, CPerson
 		m_movie_num[i] = std::to_string(i+1);
 
 }
+CHelpdesk::~CHelpdesk(){
+	delete [] m_movie_num;
+}
 
 bool CHelpdesk::menu() {
 	m_printer.msgbox("Welcome to LIM CINEMA!");
@@ -18,9 +21,9 @@ bool CHelpdesk::menu() {
 	for(int i = 0; i < 50; i++)
 		std::cout << " ";
 
-	for(int i = 0; i < 500; i++){
+	for(int i = 0; i < 20; i++){
 		std::cout << "=";
-		Sleep(10);
+		Sleep(100);
 	}
 	m_printer.clear();
 

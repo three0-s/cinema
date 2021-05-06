@@ -18,6 +18,7 @@ private:
 public:
 	CHelpdesk(CReserve& receptionist, std::string* movie_titles, CPerson_Info& customer);
 	bool menu();
+	~CHelpdesk();
 
 };
 

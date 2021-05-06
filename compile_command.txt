@@ -1,1 +1,5 @@
-g++ -o main main.cpp CPerson_Info.cpp CMovie_Info.cpp CSeat.cpp CZone.cpp CPrint.cpp CHelpdesk.cpp CReserve.cpp Cinema.cpp  
+main]
+g++ -o main main.cpp CPerson_Info.cpp CMovie_Info.cpp CSeat.cpp CZone.cpp CPrint.cpp CHelpdesk.cpp CReserve.cpp Cinema.cpp
+
+test]
+g++ -o test test.cpp CPerson_Info.cpp CMovie_Info.cpp CSeat.cpp CZone.cpp CPrint.cpp CHelpdesk.cpp CReserve.cpp    
